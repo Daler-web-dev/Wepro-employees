@@ -16,17 +16,17 @@ class App extends Component {
                 { name: 'Сохиб Курбон', salary: 800, increase: false, rise: true, id: 1 },
                 { name: 'Шахзод Хамидов', salary: 3000, increase: true, rise: false, id: 2 },
                 { name: 'Далер Шарифкулов', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Бекзод Хамидов', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Алишер Мардиев', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Мухаммад', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Сабина Яковлева', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Руфина', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Хуршида', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Дилшод Муртазоев', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Ориф', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Улугбек', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Влад Цой', salary: 5000, increase: false, rise: false, id: 3 },
-                { name: 'Алина', salary: 5000, increase: false, rise: false, id: 3 },
+                { name: 'Бекзод Хамидов', salary: 5000, increase: false, rise: false, id: 4 },
+                { name: 'Алишер Мардиев', salary: 5000, increase: false, rise: false, id: 5 },
+                { name: 'Мухаммад', salary: 5000, increase: false, rise: false, id: 6 },
+                { name: 'Сабина Яковлева', salary: 5000, increase: false, rise: false, id: 7 },
+                { name: 'Руфина', salary: 5000, increase: false, rise: false, id: 8 },
+                { name: 'Хуршида', salary: 5000, increase: false, rise: false, id: 9 },
+                { name: 'Дилшод Муртазоев', salary: 5000, increase: false, rise: false, id: 10 },
+                { name: 'Ориф', salary: 5000, increase: false, rise: false, id: 11 },
+                { name: 'Улугбек', salary: 5000, increase: false, rise: false, id: 12 },
+                { name: 'Влад Цой', salary: 5000, increase: false, rise: false, id: 13 },
+                { name: 'Алина', salary: 5000, increase: false, rise: false, id: 14 },
             ],
             term: '',
             filter: 'all'
@@ -72,7 +72,7 @@ class App extends Component {
 
     searchEmp = (items, term) => {
         if (term.length === 0) {
-            return items
+            return items;
         }
 
         return items.filter(item => {
@@ -107,7 +107,7 @@ class App extends Component {
 
         return (
             <div className="app">
-                <AppInfo employees={employees} increased={increased} dataLength={data.length} toRise={this.increased} />
+                <AppInfo employees={employees} increased={increased} />
 
                 <div className="search-panel">
                     <SearchPanel onUpdateSearch={this.onUpdateSearch} />
